@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "06042002",
+    "database": "todolist",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "sql_ult_unlockca",
+    "password": "ReJNzy82FMGGxX7A",
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
