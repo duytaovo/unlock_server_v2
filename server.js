@@ -19,7 +19,7 @@ const publicPathDirectory = path.join(__dirname, "./public");
 app.use("/public", express.static(publicPathDirectory));
 
 // dùng router
-app.use("/api", rootRouter);
+// app.use("/api", rootRouter);
 
 // lắng nghe sự kiện kết nối
 app.listen(8080, async () => {
