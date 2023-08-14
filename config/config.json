@@ -1,9 +1,10 @@
 {
   "development": {
-    "username": "root",
-    "password": "06042002",
-    "database": "",
-    "host": "localhost",
+    "username": "sql_ult_unlockca",
+    "password": "ReJNzy82FMGGxX7A",
+    "database": "sql_ult_unlockca",
+    "host": "ult.unlockcar.co",
+    "port": "3308",
     "dialect": "mysql"
   },
   "test": {
