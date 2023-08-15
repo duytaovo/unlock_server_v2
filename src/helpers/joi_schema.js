@@ -1,18 +1,16 @@
-import joi from "joi";
+const joi = require("joi");
+// module.exports.email = joi
+//   .string()
+//   .pattern(new RegExp("gmail.com$"))
+//   .required();
 
-export const email = joi.string().pattern(new RegExp("gmail.com$")).required();
+// module.exports.password = joi
+//   .string()
+//   .pattern(new RegExp("^[a-zA-Z0-9]{6,30}$"))
+//   .required();
 
-export const password = joi
-  .string()
-  .pattern(new RegExp("^[a-zA-Z0-9]{6,30}$"))
-  .required();
-
-export const title = joi.string().required();
-export const price = joi.number().required();
-export const available = joi.number().required();
-export const category_code = joi.string().uppercase().alphanum().required(); // alphanum nghia la k chua ki tu dac biet
-export const image = joi.string().required();
-export const bid = joi.string().required();
-export const bids = joi.array().required();
-export const filename = joi.array().required();
-export const description = joi.string().required();
+module.exports.part_id = joi.string().required();
+module.exports.content = joi.string().required();
+module.exports.isDeleted = joi.number().required();
+module.exports.permision = joi.number().required();
+module.exports.special = joi.number().required();

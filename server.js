@@ -25,7 +25,9 @@ app.use("/public", express.static(publicPathDirectory));
 // dùng router
 app.use("/api", rootRouter);
 
-app.post("/test", authenticateToken, (req, res) => res.json(req.user));
+app.post("/test", authenticateToken, (req, res) =>
+  res.json(req.user.permissions)
+);
 
 // lắng nghe sự kiện kết nối
 app.listen(8080, async () => {
