@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node server.js",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "babel-cli": "^6.26.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.17.1",
     "express-fingerprint": "^1.2.2",
     "gravatar-url": "^3.1.0",
