@@ -1,9 +1,13 @@
 const express = require("express");
 const path = require("path");
 const { sequelize } = require("./src/models");
+const { rootRouter } = require("./src/routes");
 
 const Fingerprint = require("express-fingerprint");
 const cors = require("cors");
+const authRouter = require("./src/routes/auth.route");
+const { authenticateToken } = require("./src/middlewares/authenticateToken");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
@@ -19,7 +23,9 @@ const publicPathDirectory = path.join(__dirname, "./public");
 app.use("/public", express.static(publicPathDirectory));
 
 // dùng router
-// app.use("/api", rootRouter);
+app.use("/api", rootRouter);
+
+app.post("/test", authenticateToken, (req, res) => res.json(req.user));
 
 // lắng nghe sự kiện kết nối
 app.listen(8080, async () => {
